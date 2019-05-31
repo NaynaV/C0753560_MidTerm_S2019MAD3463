@@ -24,12 +24,14 @@ public class C0753560
 
 
 
-      String  str = "naina";
-        obj.mostFrequent(str);
+     // String  str = "naina";
+       // obj.mostFrequent(str);
 
-        String str2 = "Vaibhavi";
-        obj.mostFrequent(str2);
+        //String str2 = "Vaibhavi";
+        //obj.mostFrequent(str2);
 
+        String str3 = "naina";
+        obj.mostFrequent(str3);
     }
 
 

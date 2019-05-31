@@ -45,7 +45,8 @@ public class LambtonStringTools {
 //Q:3 Initials
 
 
-    public void initials(String s) {
+    public void initials(String s)
+    {
 
         int len = s.length();
         s = s.trim();
@@ -69,35 +70,82 @@ public class LambtonStringTools {
         System.out.println(str2);
     }
 
+    //Q:4 MostFrequent
 
-    public char mostFrequent(String str)
+    public void mostFrequent(String str)
     {
+
+
+        int i, j, min, max;
+        int[] freq = new int[str.length()];
+        char minChar = str.charAt(0);
+        char maxChar = str. charAt(0);
+
+
+        char string[] = str.toCharArray();
+
+
+        for(i = 0; i < string.length; i++) {
+            freq[i] = 1;
+            for(j = i+1; j < string.length; j++) {
+                if(string[i] == string[j] && string[i] != ' ' && string[i] != '0') {
+                    freq[i]++;
+
+
+                    string[j] = '0';
+                }
+            }
+        }
+
+
+                min = max = freq[0];
+        for(i = 0; i <freq.length; i++) {
+
+                    if(min > freq[i] && freq[i] != '0')
+                    {
+                min = freq[i];
+                minChar = string[i];
+            }
+          
+            if(max < freq[i]) {
+                max = freq[i];
+                maxChar = string[i];
+            }
+        }
+
+        System.out.println("Minimum occurring character: " + minChar);
+        System.out.println("Maximum occurring character: " + maxChar);
+    }
+       /*
+
         int counter[] = new int[256];
 
-        int len = str.length();
+        int len = str3.length();
 
         for (int i = 0; i < len; i++)
-            counter[str.charAt(i)]++;
+            counter[str3.charAt(i)]++;
 
 
-        char array[] = new char[str.length()];
+        char array[] = new char[str3.length()];
         for (int i = 0; i < len; i++) {
-            array[i] = str.charAt(i);
+            array[i] = str3.charAt(i);
             int flag = 0;
             for (int j = 0; j <= i; j++) {
 
 
-                if (str.charAt(i) == array[j])
+                if (str3.charAt(i) == array[j])
                     flag++;
             }
 
-            if (flag == 1) {
-                System.out.println("Occurrence of char " + str.charAt(i)
-                        + " in the String is:" + counter[str.charAt(i)]);
+            if (flag == 1)
+            {
+                System.out.println("Character  " + str3.charAt(i)
+                        + "is occuring :" + counter[str3.charAt(i)]);
             }
 
 
         }
-
+*/
     }
+
 }
