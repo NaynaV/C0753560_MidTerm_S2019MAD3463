@@ -85,10 +85,12 @@ public class LambtonStringTools {
         char string[] = str.toCharArray();
 
 
-        for(i = 0; i < string.length; i++) {
+        for(i = 0; i < string.length; i++)
+        {
             freq[i] = 1;
             for(j = i+1; j < string.length; j++) {
-                if(string[i] == string[j] && string[i] != ' ' && string[i] != '0') {
+                if(string[i] == string[j] && string[i] != ' ' && string[i] != '0')
+                {
                     freq[i]++;
 
 
@@ -106,46 +108,15 @@ public class LambtonStringTools {
                 min = freq[i];
                 minChar = string[i];
             }
-          
+
             if(max < freq[i]) {
                 max = freq[i];
                 maxChar = string[i];
             }
         }
 
-        System.out.println("Minimum occurring character: " + minChar);
-        System.out.println("Maximum occurring character: " + maxChar);
-    }
-       /*
 
-        int counter[] = new int[256];
-
-        int len = str3.length();
-
-        for (int i = 0; i < len; i++)
-            counter[str3.charAt(i)]++;
-
-
-        char array[] = new char[str3.length()];
-        for (int i = 0; i < len; i++) {
-            array[i] = str3.charAt(i);
-            int flag = 0;
-            for (int j = 0; j <= i; j++) {
-
-
-                if (str3.charAt(i) == array[j])
-                    flag++;
-            }
-
-            if (flag == 1)
-            {
-                System.out.println("Character  " + str3.charAt(i)
-                        + "is occuring :" + counter[str3.charAt(i)]);
-            }
-
-
-        }
-*/
     }
 
-}
+    }
+
