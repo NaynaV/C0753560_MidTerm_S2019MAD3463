@@ -40,10 +40,10 @@ public class C0753560
 
 
 
-        String str = "The Haunting of Hill House!";
+        String str = "the dog jumped over the fence";
         System.out.println("String: "+str);
         obj.replaceSubString(str);
-       
+
     }
 
 
