@@ -118,5 +118,16 @@ public class LambtonStringTools {
 
     }
 
+    //Q : 5
+
+    public void replaceSubString(String str1)
+    {
+
+        int pos = 7;
+        char rep = 'p';
+        String res = str1.substring(0, pos) + rep + str1.substring(pos + 1);
+        System.out.println("String after replacing a character: "+res);
+    }
+
     }
 

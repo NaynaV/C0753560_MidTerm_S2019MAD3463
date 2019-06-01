@@ -39,6 +39,11 @@ public class C0753560
         System.out.println("Maximum occurring character: " + maxChar2);
 
 
+
+        String str = "The Haunting of Hill House!";
+        System.out.println("String: "+str);
+        obj.replaceSubString(str);
+       
     }
 
 
